@@ -6,11 +6,11 @@ from aliyunsdkdysmsapi.request.v20170525.SendSmsRequest import SendSmsRequest
 
 
 def send_sms(phone, code):
-    client = AcsClient('', '', '') #你的ID 你的密钥 你的位置
+    client = AcsClient('', '', '')  # 你的ID 你的密钥 你的位置
     # // 创建API请求并设置参数
     request = SendSmsRequest()
-    request.set_SignName("Your Signature")
-    request.set_TemplateCode('Your TemplateCode')
+    request.set_SignName("你的签名")
+    request.set_TemplateCode('你的模板代码')
     params = "{\"code\":\"" + str(code) + "\"}"  # 发送的手机验证码格式
     request.set_TemplateParam(params)
     request.set_PhoneNumbers(str(phone))
@@ -24,5 +24,5 @@ def send_sms(phone, code):
 
 
 if __name__ == '__main__':
-    result = send_sms('Your Testing Phone', '999888')
+    result = send_sms('测试手机号', '999888')
     print(result)
