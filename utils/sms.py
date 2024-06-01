@@ -6,7 +6,7 @@ from aliyunsdkdysmsapi.request.v20170525.SendSmsRequest import SendSmsRequest
 
 
 def send_sms(phone, code):
-    client = AcsClient('Your Access Secret ID', 'Your Access Secret Key', 'Your location like cn-shanghai')
+    client = AcsClient('', '', '') # Access Secret ID  |  Access Secret Key  |  Location
     # // 创建API请求并设置参数
     request = SendSmsRequest()
     request.set_SignName("Your Signature")
